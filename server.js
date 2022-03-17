@@ -1,8 +1,9 @@
 const express = require('express')
 const app = express()
+require('dotenv').config()
 
 app.get('/', (req, res) => {
-  res.send('<h1>Hello, world!<h1/>')
+  res.send('Hello, world!')
 })
 
-app.listen(3000)
+app.listen(process.env.PORT)
